@@ -1,0 +1,46 @@
+# If you are using PyCharm #
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+*.iws /out/
+
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+
+# Django #
+logs
+*.log
+*.pot
+*.pyc
+.dccachea
+__pycache__
+*.sqlite3
+*.sqlite3-journal
+media
+cache
+static-deploy
+data
+settings.json
+
+
+# Visual Studio Code #
+.vscode
+.vscode/*
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.history
+%SystemDrive%

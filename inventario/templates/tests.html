@@ -1,0 +1,44 @@
+
+
+
+{% load reactpy %}
+<!DOCTYPE html>
+<html>
+  <body>
+    {% component "example_project.my_app.components.hello_world" recipient="World" %}
+  </body>
+</html>
+
+
+
+
+
+
+<!-- <head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+<div>
+  <h1>hola</h1>
+</div>
+
+<div class="menu_agregar_producto">
+  <form action="/tests" method="POST">
+    {% csrf_token %}
+    <div>
+      <h2>Agregar producto</h2>
+      <div>Clave {{form.clave_producto}}</div>
+      <div>Nombre {{form.nombre_producto}}</div>
+      <div>Categoria {{form.categoria_producto}}</div>
+      <div>Cantidad {{form.catidad_producto}}</div>
+      <div>Cantidad Reserva {{form.catidad_reserva_producto}}</div>
+      <div>Precio de Compra {{form.precio_compra_producto}}</div>
+      <div>Precio de Venta {{form.precio_venta_producto}}</div>
+      <div>Fecha de caducidad {{form.fecha_caducidad_producto}}</div>
+      <div>Informacion adicional {{form.informacion_producto}}</div>
+      <br />
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+</div> -->

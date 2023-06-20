@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,300,500&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="add_card">
+      <button>+</button>
+    </div>
+    <header>
+      <h1>Inventario</h1>
+      <nav>
+        <div class="search">
+          <input type="search" name="" id="" />
+          <img src="{% static 'img/busqueda-96.png' %}" alt="Buscar" />
+        </div>
+
+        <div>
+          <a href=""> cerrar sesion </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container_cards">
+        {% if productos %} {% for producto in productos %}
+        <div class="card card_{{producto.clave_producto}}">
+          <div class="card_clave">{{producto.clave_producto}}</div>
+          <div class="card_categoria">{{producto.categoria_producto}}</div>
+          <div class="card_nombre">{{producto.nombre_producto.capitalize}}</div>
+          <div class="card_cantidad">{{producto.catidad_producto}} U</div>
+          <div class="card_precio">$ {{producto.precio_venta_producto}}</div>
+          <div class="card_edit">
+            <a href="/editar_producto/{{producto.clave_producto}}">
+              <img src="{% static 'img/editar-32.png' %}" alt="Editar" />
+            </a>
+          </div>
+          <div class="card_delet">
+            <a href="/eliminar_producto/{{producto.clave_producto}}">
+              <img src="{% static 'img/basura-32.png' %}" alt="Eliminar" />
+            </a>
+          </div>
+        </div>
+        {% endfor %} {% endif %}
+      </section>
+    </main>
+    <aside>
+      <div class="container_icon">
+        <a href="/inventario/">
+          <img src="{% static 'img/carretilla-96.png' %}" alt="Inventario" />
+        </a>
+      </div>
+      <div class="container_icon">
+        <a href="/Ventas">
+          <img src="{% static 'img/caja-registradora-96.png' %}" alt="Ventas" />
+        </a>
+      </div>
+      <div class="container_icon">
+        <a href="/Compras">
+          <img src="{% static 'img/pagado-96.png' %}" alt="Compras" />
+        </a>
+      </div>
+    </aside>
+
+    <footer></footer>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
